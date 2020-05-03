@@ -1,8 +1,8 @@
 const routes = require('express').Router();
-const about = require('./about');
 
-routes.use('/about', about);
-
+// add routes
+// examples of routing methods
+routes.use('/about', require('./about'));
 routes.get('/', (req, res) => {
     res.status(200).json({ message: 'Connected!' });
 });
